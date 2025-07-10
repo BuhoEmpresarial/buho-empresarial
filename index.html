@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búho Empresarial - Consultoría Estratégica en Chile</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Un gris muy claro para el fondo general */
+        }
+        /* Colores personalizados de Tailwind */
+        .bg-buho-dark {
+            background-color: #0A192F; /* Azul oscuro del logo */
+        }
+        .text-buho-gold {
+            color: #FFD700; /* Dorado del logo */
+        }
+        .border-buho-gold {
+            border-color: #FFD700;
+        }
+        .hover\:bg-buho-gold:hover {
+            background-color: #FFD700;
+        }
+        .hover\:text-buho-dark:hover {
+            color: #0A192F;
+        }
+        .section-padding {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        @media (max-width: 768px) {
+            .section-padding {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header (Encabezado) -->
+    <header class="bg-buho-dark text-white p-4 shadow-lg fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="https://placehold.co/60x60/0A192F/FFFFFF?text=Logo" alt="Logo Búho Empresarial" class="h-12 w-12 rounded-full mr-3">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold">Búho Empresarial</span>
+                    <span class="text-sm text-gray-300">Crece con visión.</span>
+                </div>
+            </div>
+
+            <!-- Menú de navegación principal (Desktop) -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#inicio" class="hover:text-buho-gold transition duration-300">Inicio</a></li>
+                <li><a href="#sobre-nosotros" class="hover:text-buho-gold transition duration-300">Sobre Nosotros</a></li>
+                <li><a href="#servicios" class="hover:text-buho-gold transition duration-300">Servicios</a></li>
+                <li><a href="#contacto" class="hover:text-buho-gold transition duration-300">Contacto</a></li>
+            </ul>
+
+            <!-- Botón de Contacto (Desktop) -->
+            <a href="https://wa.me/56933243073?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20de%20consultoría." target="_blank" class="hidden md:block bg-buho-gold text-buho-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-600 transition duration-300 shadow-md">
+                Agenda una Asesoría
+            </a>
+
+            <!-- Menú hamburguesa (Mobile) -->
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menú móvil (oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-buho-dark mt-4 rounded-lg shadow-lg">
+            <ul class="flex flex-col items-center space-y-4 py-4">
+                <li><a href="#inicio" class="block text-white hover:text-buho-gold transition duration-300 py-2">Inicio</a></li>
+                <li><a href="#sobre-nosotros" class="block text-white hover:text-buho-gold transition duration-300 py-2">Sobre Nosotros</a></li>
+                <li><a href="#servicios" class="block text-white hover:text-buho-gold transition duration-300 py-2">Servicios</a></li>
+                <li><a href="#contacto" class="block text-white hover:text-buho-gold transition duration-300 py-2">Contacto</a></li>
+                <li>
+                    <a href="https://wa.me/56933243073?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20de%20consultoría." target="_blank" class="block bg-buho-gold text-buho-dark px-6 py-2 rounded-full font-semibold hover:bg-yellow-600 transition duration-300 shadow-md">
+                        Agenda una Asesoría
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section (Sección Principal) -->
+    <section id="inicio" class="relative bg-buho-dark text-white section-padding pt-32 md:pt-48 pb-24 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://placehold.co/1920x1080/0A192F/FFFFFF?text=Imagen+de+fondo+profesional')"></div>
+        <div class="container mx-auto text-center relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-up">
+                Búho Empresarial: <span class="text-buho-gold">Tu Guía Estratégica</span> para el Éxito en Chile
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-200">
+                Ofrecemos consultoría especializada para impulsar el crecimiento y la eficiencia de tu negocio en el mercado chileno.
+            </p>
+            <a href="https://wa.me/56933243073?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20de%20consultoría." target="_blank" class="inline-block bg-buho-gold text-buho-dark px-8 py-3 rounded-full font-bold text-lg hover:bg-yellow-600 transition duration-300 shadow-xl transform hover:scale-105 animate-fade-in-up delay-400">
+                Agenda tu Asesoría Hoy
+            </a>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros (About Us) -->
+    <section id="sobre-nosotros" class="bg-white section-padding">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-12 px-4">
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400/F8F9FA/0A192F?text=Nuestra+Visión" alt="Imagen de Nuestra Visión" class="rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-bold mb-6 text-buho-dark">Nuestra Visión: <span class="text-buho-gold">Crecemos Contigo</span></h2>
+                <p class="text-lg leading-relaxed mb-6 text-gray-700">
+                    En Búho Empresarial, nos dedicamos a ser el socio estratégico que tu negocio necesita en Chile. Nuestra misión es proporcionar soluciones de consultoría personalizadas que impulsen la innovación, optimicen los procesos y garanticen un crecimiento sostenible.
+                </p>
+                <p class="text-lg leading-relaxed mb-6 text-gray-700">
+                    Creemos firmemente en el potencial de cada empresario chileno. Hoy, somos un consultor dedicado a tu éxito, pero nuestra visión es expandirnos y convertirnos en un equipo multidisciplinario, siempre manteniendo la cercanía y el compromiso que nos caracterizan.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-700">
+                    Con Búho Empresarial, obtendrás una guía experta y una visión clara para superar desafíos y aprovechar nuevas oportunidades en el dinámico mercado actual.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios (Services) -->
+    <section id="servicios" class="bg-gray-100 section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-buho-dark">Nuestros <span class="text-buho-gold">Servicios</span> de Consultoría</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1: Planificación Estratégica -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-buho-gold mb-6">
+                        <i class="fas fa-chart-line text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-buho-dark">Planificación Estratégica</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Desarrollamos planes estratégicos sólidos que te permiten definir objetivos claros y trazar el camino hacia el éxito a largo plazo.
+                    </p>
+                </div>
+
+                <!-- Servicio 2: Optimización de Procesos -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-buho-gold mb-6">
+                        <i class="fas fa-cogs text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-buho-dark">Optimización de Procesos</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Identificamos ineficiencias y diseñamos soluciones para mejorar la productividad y reducir costos operativos.
+                    </p>
+                </div>
+
+                <!-- Servicio 3: Asesoría Financiera -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-buho-gold mb-6">
+                        <i class="fas fa-dollar-sign text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-buho-dark">Asesoría Financiera</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Te brindamos las herramientas y el conocimiento para una gestión financiera eficiente y decisiones de inversión inteligentes.
+                    </p>
+                </div>
+
+                <!-- Servicio 4: Marketing Digital -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-buho-gold mb-6">
+                        <i class="fas fa-bullhorn text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-buho-dark">Marketing Digital</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Creamos estrategias de marketing digital para aumentar tu visibilidad, atraer clientes y potenciar tu marca online.
+                    </p>
+                </div>
+
+                <!-- Servicio 5: Desarrollo de Liderazgo -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-buho-gold mb-6">
+                        <i class="fas fa-user-tie text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-buho-dark">Desarrollo de Liderazgo</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Fortalecemos las habilidades de liderazgo dentro de tu equipo para fomentar un ambiente de trabajo productivo y motivador.
+                    </p>
+                </div>
+
+                <!-- Servicio 6: Gestión de Proyectos -->
+                <div class="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <div class="text-buho-gold mb-6">
+                        <i class="fas fa-project-diagram text-5xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-buho-dark">Gestión de Proyectos</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Te ayudamos a planificar, ejecutar y monitorear tus proyectos para asegurar su éxito y cumplimiento de objetivos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios (Testimonials) -->
+    <section id="testimonios" class="bg-white section-padding">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-buho-dark">Lo que Dicen <span class="text-buho-gold">Nuestros Clientes</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-gray-50 rounded-xl shadow-md p-8 text-center border-t-4 border-buho-gold">
+                    <p class="text-lg italic mb-6 text-gray-700">
+                        "La asesoría de Búho Empresarial fue clave para redefinir nuestra estrategia de mercado. Su visión y profesionalismo son invaluables."
+                    </p>
+                    <p class="font-semibold text-buho-dark">- Ana María Soto, CEO de InnovaTech</p>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="bg-gray-50 rounded-xl shadow-md p-8 text-center border-t-4 border-buho-gold">
+                    <p class="text-lg italic mb-6 text-gray-700">
+                        "Gracias a Búho Empresarial, logramos optimizar nuestros procesos internos y reducir costos significativamente. ¡Totalmente recomendados!"
+                    </p>
+                    <p class="font-semibold text-buho-dark">- Ricardo Pérez, Gerente General de Soluciones Logísticas</p>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="bg-gray-50 rounded-xl shadow-md p-8 text-center border-t-4 border-buho-gold">
+                    <p class="text-lg italic mb-6 text-gray-700">
+                        "Recibimos una asesoría financiera excepcional que nos permitió tomar decisiones cruciales para el crecimiento de nuestra startup."
+                    </p>
+                    <p class="font-semibold text-buho-dark">- Carolina Fuentes, Fundadora de Emprende Más</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto (Contact) -->
+    <section id="contacto" class="bg-buho-dark text-white section-padding">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12"><span class="text-buho-gold">Contáctanos</span> y Haz Crecer tu Negocio</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+                <!-- Información de Contacto -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <p class="text-xl mb-6 flex items-center justify-center md:justify-start">
+                        <i class="fab fa-whatsapp text-3xl text-buho-gold mr-4"></i>
+                        <a href="https://wa.me/56933243073?text=Hola,%20quisiera%20más%20información%20sobre%20sus%20servicios%20de%20consultoría." target="_blank" class="hover:underline">
+                            +56 9 3324 3073
+                        </a>
+                    </p>
+                    <p class="text-xl mb-6 flex items-center justify-center md:justify-start">
+                        <i class="fas fa-envelope text-3xl text-buho-gold mr-4"></i>
+                        <a href="mailto:contacto@buhoempresarial.cl" class="hover:underline">
+                            contacto@buhoempresarial.cl
+                        </a>
+                    </p>
+                    <p class="text-xl mb-6 flex items-center justify-center md:justify-start">
+                        <i class="fas fa-clock text-3xl text-buho-gold mr-4"></i>
+                        Lunes a Viernes: 9:00 - 18:00 hrs (GMT-4)
+                    </p>
+                    <p class="text-xl flex items-center justify-center md:justify-start">
+                        <i class="fas fa-map-marker-alt text-3xl text-buho-gold mr-4"></i>
+                        Santiago, Chile
+                    </p>
+                </div>
+
+                <!-- Formulario de Contacto (Opcional) -->
+                <div class="md:w-1/2 bg-white p-8 rounded-xl shadow-lg text-gray-800">
+                    <h3 class="text-2xl font-bold mb-6 text-buho-dark">Envíanos un Mensaje</h3>
+                    <form>
+                        <div class="mb-4">
+                            <input type="text" id="name" name="name" placeholder="Tu Nombre" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-buho-gold">
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" id="email" name="email" placeholder="Tu Correo Electrónico" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-buho-gold">
+                        </div>
+                        <div class="mb-6">
+                            <textarea id="message" name="message" rows="5" placeholder="Tu Mensaje" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-buho-gold"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-buho-gold text-buho-dark px-6 py-3 rounded-full font-bold text-lg hover:bg-yellow-600 transition duration-300 shadow-md">
+                            Enviar Mensaje
+                        </button>
+                        <p class="text-sm text-gray-600 mt-4">Nos pondremos en contacto contigo a la brevedad.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Pie de Página) -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center px-4">
+            <p class="mb-4">&copy; 2025 Búho Empresarial. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="legal.html" class="hover:text-buho-gold transition duration-300">Política de Privacidad</a>
+                <a href="legal.html" class="hover:text-buho-gold transition duration-300">Términos de Servicio</a>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="#" target="_blank" class="text-2xl hover:text-buho-gold transition duration-300"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank" class="text-2xl hover:text-buho-gold transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank" class="text-2xl hover:text-buho-gold transition duration-300"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para el menú móvil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Cerrar el menú móvil al hacer clic en un enlace
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
